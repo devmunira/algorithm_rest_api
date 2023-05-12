@@ -2,11 +2,11 @@
 GET http://localhost:4000/api/v1/health
 
 ### generate random value
-POST http://localhost:4000/api/v1/random-value
+POST  http://localhost:4000/api/v1/random-value
 Content-Type: application/json
 
 {
-    "start" : 100,
+    "start" : "100",
     "end" : 9631
 }
 
@@ -17,12 +17,13 @@ Content-Type: application/json
 
 {
     "firstName" : "Hasan",
-    "lastName" : "Bhuiyan",
+    "lastName" : "",
     "email" : "hasan984@gmail.com",
-    "avatar" : "",
+    "avatar" : "https://facebook.com/uploads/hasan/avatar.jpg",
     "age" : 12,
-    "address" : "Wari,Dhaka"
+    "address" : "",
+    "random" : "test"
 }
 
 ### String Object get
-GET http://localhost:4000/api/v1/analyse-string?string=Asfds789!@
+GET http://localhost:4000/api/v1/analyse-string?string=sd@
