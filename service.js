@@ -9,11 +9,7 @@ const generateRandom = (start = 0, end = 999) => {
 }
 
 
-/**
- * 
- * @param {User[]} userarray 
- * @returns user object
- */
+// generate random user with provided data data must be valid
 const generateRandomUser = (userarray) => {
     const items = ['firstName' , 'lastName' , 'email' , 'avatar' , 'age' , 'address']
     return items.reduce((acc,cur,index) => {
@@ -25,7 +21,7 @@ const generateRandomUser = (userarray) => {
  }
 
 
-
+// string analyze object return base on number,symbol,letters and so on
 const getStringObj = (str, regx, name) => {
     const string = str.match(regx) || [];
     return{
@@ -37,6 +33,7 @@ const getStringObj = (str, regx, name) => {
     
 }
 
+// string analyze object return base on number,symbol,letters and so on
 const analyseStringParams = (string) => {
     const array = [/\d+/g, /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/g, /[a-zA-Z]/g];
     let fields = ['number', 'symbol', 'letters']

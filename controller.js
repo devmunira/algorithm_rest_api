@@ -1,6 +1,11 @@
 const {generateRandom, generateRandomUser, analyseStringParams} = require('./service')
 
-
+/**
+ * @param {Object} req 
+ * @param {Object} res 
+ * @param {middleware} next
+ * @returns create an random number between provided range
+ */
 const createRendomNumber = (req,res,next) => {
     try {
         const {start,end} = req.body;
@@ -17,7 +22,12 @@ const createRendomNumber = (req,res,next) => {
     }
 }
 
-
+/**
+ * @param {Object} req 
+ * @param {Object} res 
+ * @param {middleware} next
+ * @returns create an random user with provided data [validate column]
+ */
 const createRandomUser = (req,res,next) => {
     try {        
         let user =  generateRandomUser(Object.values((req.body)))
@@ -29,6 +39,13 @@ const createRandomUser = (req,res,next) => {
     }
 }
 
+
+/**
+ * @param {Object} req 
+ * @param {Object} res 
+ * @param {middleware} next
+ * @returns analyze string query and return an object of number,symbol,letters details
+ */
 const getStringObject = (req,res,next) => {
     try {
         const {string} = req.query;
