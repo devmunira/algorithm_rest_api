@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const colors = require('colors')
-const {NotFoundHandler , globalErrorHandler} = require('./globalError.js')
+const {NotFoundHandler , globalErrorHandler} = require('./app/globalError.js')
 require('dotenv').config()
 
 // middleware add
-app.use(require('./middleware.js'));
-app.use('/api/v1' , require('./route.js'))
+app.use(require('./app/middleware.js'));
+app.use('/api/v1' , require('./app/route.js'))
 app.use(NotFoundHandler)
 app.use(globalErrorHandler)
 
