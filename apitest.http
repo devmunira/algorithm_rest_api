@@ -1,0 +1,25 @@
+### Health Check Route
+GET http://localhost:4000/api/v1/health
+
+### generate random value
+POST http://localhost:4000/api/v1/random-value
+Content-Type: application/json
+
+{
+    "start" : 100,
+    "end" : 9631
+}
+
+
+### generate random value
+POST http://localhost:4000/api/v1/random-user
+Content-Type: application/json
+
+{
+    "firstName" : "Hasan",
+    "lastName" : "Bhuiyan",
+    "email" : "hasan984@gmail.com",
+    "avatar" : "",
+    "age" : 12,
+    "address" : "Wari,Dhaka"
+}
