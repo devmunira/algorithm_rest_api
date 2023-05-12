@@ -23,3 +23,6 @@ Content-Type: application/json
     "age" : 12,
     "address" : "Wari,Dhaka"
 }
+
+### String Object get
+GET http://localhost:4000/api/v1/analyse-string?string=Asfds789!@

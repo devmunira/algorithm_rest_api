@@ -29,8 +29,26 @@ const createRandomUser = (req,res,next) => {
     }
 }
 
+const getStringObject = (req,res,next) => {
+    try {
+        const {string} = req.query;       
+        let obj = {}
+        let Numberregex = /\d+/g;
+        let Symbolregex = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        let lettersregex = /[a-zA-Z]/g;
+        
+        let matches = string.match(regex);
+        res.status(200).json(matches)
+    } catch (err) {
+        let error = err.message;
+        error.status = 400;
+        next(error)
+    }
+}
+
 module.exports = {
     createRendomNumber,
-    createRandomUser
+    createRandomUser,
+    getStringObject
 
 }
